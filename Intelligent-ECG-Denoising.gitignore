@@ -1,0 +1,117 @@
+# ============================================================
+# Intelligent-ECG-Denoising
+# ============================================================
+
+
+# ============================================================
+# 1. GENERATED / LARGE PROCESSED DATA
+# ============================================================
+
+# Large processed ECG CSV
+dataset/processed/*.csv
+
+
+# ============================================================
+# 2. NSRDB
+# Keep ONLY record 16265
+# ============================================================
+
+# Ignore everything inside NSRDB
+dataset/NSRDB/*
+
+# Keep the NSRDB directory itself
+!dataset/NSRDB/
+
+# Keep ALL files belonging to record 16265
+!dataset/NSRDB/16265.*
+
+
+# ============================================================
+# 3. NSTDB
+# Keep ONLY bw, em and ma noise records
+# ============================================================
+
+# Ignore everything inside NSTDB
+dataset/NSTDB/*
+
+# Keep the NSTDB directory itself
+!dataset/NSTDB/
+
+# Keep BW noise record
+!dataset/NSTDB/bw.*
+
+# Keep EM noise record
+!dataset/NSTDB/em.*
+
+# Keep MA noise record
+!dataset/NSTDB/ma.*
+
+
+# ============================================================
+# 4. PYTHON CACHE / TEMPORARY FILES
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.ipynb_checkpoints/
+
+
+# ============================================================
+# 5. VIRTUAL ENVIRONMENTS
+# ============================================================
+
+venv/
+.venv/
+env/
+ENV/
+
+# Environment / secret files
+.env
+.env.*
+!.env.example
+
+
+# ============================================================
+# 6. IDE / EDITOR FILES
+# ============================================================
+
+# VS Code workspace files
+.vscode/
+
+# Keep project settings only if needed manually
+# !.vscode/settings.json
+
+
+# ============================================================
+# 7. OS GENERATED FILES
+# ============================================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+
+# ============================================================
+# 8. LOG / TEMP FILES
+# ============================================================
+
+*.log
+*.tmp
+*.temp
+
+
+# ============================================================
+# 9. PROJECT TREE / TEMP DOCUMENTATION
+# ============================================================
+
+tree.txt
